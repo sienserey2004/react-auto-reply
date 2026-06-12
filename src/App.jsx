@@ -4,8 +4,10 @@ import Login from './pages/Login'
 import AuthCallback from './pages/AuthCallback'
 import Dashboard from './pages/Dashboard'
 import Analysis from './pages/Analysis'
+import Agent from './pages/Agent'
 import './App.css'
 import './Analysis.css'
+import './Agent.css'
 
 function PrivateRoute({ children }) {
   const { isAuthenticated } = useAuth()
@@ -21,6 +23,7 @@ function App() {
           <Route path="/auth/callback" element={<AuthCallback />} />
           <Route path="/dashboard" element={<PrivateRoute><Dashboard /></PrivateRoute>} />
           <Route path="/analysis" element={<PrivateRoute><Analysis /></PrivateRoute>} />
+          <Route path="/agent" element={<PrivateRoute><Agent /></PrivateRoute>} />
           <Route path="*" element={<Navigate to="/login" replace />} />
         </Routes>
       </BrowserRouter>
