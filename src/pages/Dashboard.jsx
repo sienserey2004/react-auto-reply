@@ -51,6 +51,8 @@ export default function Dashboard() {
         <div className="dash-logo">⚡ PageSync</div>
         <div className="dash-actions">
           <button className="refresh-btn" onClick={() => navigate('/agent')} style={{borderColor:'var(--green)',color:'var(--green)'}}>🟢 AI Agent</button>
+          <button className="refresh-btn" onClick={() => navigate('/inventory')}>📦 Inventory</button>
+          <button className="refresh-btn" onClick={() => navigate('/orders')}>🧾 Orders</button>
           <button className="refresh-btn" onClick={() => navigate('/analysis')} style={{borderColor:'var(--accent)',color:'var(--accent)'}}>🤖 AI Analysis</button>
           <button className="refresh-btn" onClick={fetchData}>↻ Refresh</button>
           <button className="logout-btn" onClick={() => { logout(); navigate('/login') }}>Sign out</button>
